@@ -1,0 +1,8 @@
+
+<h1>Dashboards#simple</h1>
+
+<h2>Movies per Year</h2>
+<h4>Total of Movies: <%=Movie.count%> </h4>
+<%= line_chart @movies_by_year %>
+<br>
+<%= bar_chart @movies_by_year %>

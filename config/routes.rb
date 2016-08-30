@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+  root 'dashboards#index'
+
+  get 'dashboards/index'
+
+  get 'dashboards/simple'
+
+  get 'dashboards/doble'
+
+  get 'dashboards/triple'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

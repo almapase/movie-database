@@ -1,0 +1,33 @@
+<h1>Dashboards#index</h1>
+
+<ul>
+  <li> <%= link_to "Simple", dashboards_simple_path %> </li>
+  <li> <%= link_to "Doble", dashboards_doble_path %> </li>
+  <li> <%= link_to "Triple", dashboards_triple_path %> </li>
+</ul>
+
+<h1>Movies</h1>
+
+<h1>Listing Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>data Release</th>
+      <th>Genre</th>
+      <th>Studio</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.name %></td>
+        <td><%= movie.release_date %></td>
+        <td><%= movie.genre.try(:name) %></td>
+        <td><%= movie.studio.try(:name) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
